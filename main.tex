@@ -1,0 +1,68 @@
+\documentclass[a4paper]{uexthesis}
+
+
+\author{Here goes your name}
+\title{A very interesting PhD thesis}
+\place{Cáceres, 2015}
+
+\begin{document}
+\sloppy
+
+\InsertaPaginasIniciales
+
+
+\pagenumbering{gobble}
+\include{abstract_en} % Abstract en inglés
+\newpage{\cleardoublepage}
+\include{abstract_es} % Abstract en castellano
+\newpage{\cleardoublepage}
+\include{abstract_ext} % Abstract en estremeñu (ocioná)
+\newpage{\cleardoublepage}
+
+
+\newpage{\ }
+\newpage{\thispagestyle{headings}\cleardoublepage}
+
+% \shorttableofcontents{Brief Contents}{0}
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\tableofcontents
+
+\newpage{\thispagestyle{empty}\ }
+\newpage{\thispagestyle{empty}\cleardoublepage}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \pagestyle{headings}
+\pagenumbering{arabic}
+
+
+\include{introduction}
+\part{Part 1}\label{part1}
+  \include{chapter1}
+  \include{chapter2}
+\part{Part 2}\label{part2}
+  \include{chapter3}
+  \include{chapter4}
+\part{Conclusions}\label{conclusionsPart}
+  \include{review}
+  \include{futureWork}
+  \include{publications}
+
+\newpage{\thispagestyle{empty}\cleardoublepage}
+\printindex
+\newpage{\thispagestyle{empty}\cleardoublepage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\def\printbetweencitations{; }
+\bibliography{references}
+\def\printbetweencitations{; }
+
+\end{document}
+

@@ -1,0 +1,42 @@
+\chapter{Otro capítulo más}
+
+Las \importante{referencias}~\cite{Smith-2006} se incluyen usando el comando \textit{cite}. Pueden ser simples~\cite{Smith-2006} o pueden referenciar varios trabajos a la vez~\cite{Smith-2006,Schlegel-2006}. La definición de las referencias está en un fichero separado llamado \textit{references.bib}, donde se encuentran múltiples ejemplos.
+
+\par
+\importante{tablas} son también fáciles de incluir, la tabla~\ref{tbl:schlegel1} es un ejemplo de ello. 
+\begin{table}[thbp]
+\centering
+\caption{Communication patterns detected in~\cite{Schlegel-2006}.} 
+\begin{centering}
+ \begin{minipage}{0.9\textwidth}\label{tbl:schlegel1}
+  \centering
+  \begin{tabular}{|l|l|} 
+   \hline
+send & One-way message \\ \hline
+query (a.k.a RPC) & Two-way request/response \\ \hline
+push newest (a.k.a. pub/sub)\footnote{\label{note_patterns}The patterns \textit{push timed} and \textit{event} can be seen as special cases of the \textit{push newest} (push) pattern.} & Message broadcast \\ \hline
+push timed & Periodic message broadcast \\ \hline
+event & Asynchronous event broadcast \\ \hline
+wiring & Component connection/disconnection \\ \hline
+   \end{tabular} 
+  \end{minipage}
+ \end{centering} 
+\end{table}
+\par
+\par
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+\par
+Lo siguiente es un ejemplo de listado:
+\begin{lstlisting}[caption=\textit{VowelCounter.ice}, label=list:firstexample_ice]
+module VowelCounterModule
+{
+  interface VowelCounter
+  {
+    int compute(string text);
+  };
+};
+\end{lstlisting}
+\par
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
